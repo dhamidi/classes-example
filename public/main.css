@@ -39,7 +39,7 @@ header {
 }
 
 .action {
-    margin: 5px 0;
+    margin: 0 5px 10px 5px;
 }
 
 .action__title {
@@ -56,6 +56,7 @@ header {
 
 .item-list--empty {
     background-color: #cfcfcf;
+    padding: 5px;
 }
 
 .item-list__item {
