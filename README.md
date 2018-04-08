@@ -8,6 +8,10 @@ An additional benefit is that it is now possible to test database access functio
 
 # Screenshots
 
+## An empty list
+
 ![](./screenshots/empty.png)
+
+## A list with items
 
 ![](./screenshots/filled.png)
