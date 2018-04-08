@@ -13,7 +13,7 @@ def serve_static(filename):
 
 @route(method='GET', path='/')
 def index_page():
-    all_items = request.app.config['db'].list_items()
+    all_items = list(reversed(request.app.config['db'].list_items()))
     return template('./templates/index.html', items=all_items)
 
 
