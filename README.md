@@ -1,0 +1,1 @@
+A teaching example for when and how to use classes
