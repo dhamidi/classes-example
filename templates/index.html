@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Classes Example</title>
+    <link rel="stylesheet" href="/assets/main.css">
+  </head>
+  <body>
+    <header>
+      A list of things
+    </header>
+    <main>
+      <div class="action">
+	<p class="action__title">Add an item</p>
+	<form class="form" action="/actions/add-item" method="POST">
+	  <p class="form__row">
+	    <label for="name">
+	      <span class="form__label">What</span>
+	      <input class="form__inline-input"  id="name" name="name" placeholder="A thing">
+	    </label>
+	  </p>
+	  <p class="form__row">
+	    <label for="location">
+	      <span class="form__label">Where</span>
+	      <input class="form__inline-input" id="location" name="location" placeholder="Tallinn">
+	    </label>
+	  </p>
+	  <p class="form__row">
+	    <button class="action__execute" type="submit">
+	      Add to list
+	    </button>
+	  </p>
+	</form>
+      </div>
+      %if len(items) == 0:
+      <div class="item-list item-list--empty">No items found</div>
+      %else:
+      <div class="item-list">
+	%for item in items:
+	<div class="item-list__item">
+	  <strong class="item-list__item-name">{{item['name']}}</strong>
+	  %if item.get('added_at'):
+	  <span clsas="item-list__item-added-at">{{item['added_at']}}</span>
+	  %end
+	  <span class="item-list__item-location">Location: {{item['location']}}</span>
+	</div>
+	%end
+      </div>
+      %end
+    </main>
+  </body>
+</html>
