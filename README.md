@@ -8,6 +8,6 @@ An additional benefit is that it is now possible to test database access functio
 
 # Screenshots
 
-![./screenshots/empty.png]
+![](./screenshots/empty.png)
 
-![./screenshots/filled.png]
+![](./screenshots/filled.png)
