@@ -62,12 +62,20 @@ header {
     border: 1px solid #3e3030;
     border-bottom: 0;
     padding: 5px;
+    position: relative;
 }
 
 .item-list__item-name {
     display: block;
     font-size: 20px;
     margin-bottom: 5px;
+}
+
+.item-list__item-added-at {
+    position: absolute;
+    color: #505050;
+    top: 5px;
+    right: 5px;
 }
 
 .item-list__item:last-child {

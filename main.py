@@ -1,5 +1,5 @@
 from database import Database
-from datetime import date
+from datetime import datetime
 from bottle import route, request, response, template, run, default_app, redirect, static_file
 
 def configure_bottle():
@@ -22,7 +22,7 @@ def add_item():
     new_item = {
         'name': request.forms.get('name'),
         'location': request.forms.get('location'),
-        'added_at': date()
+        'added_at': datetime.now()
     }
     request.app.config['db'].add_item(new_item)
     redirect("/")

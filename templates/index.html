@@ -40,7 +40,7 @@
 	<div class="item-list__item">
 	  <strong class="item-list__item-name">{{item['name']}}</strong>
 	  %if item.get('added_at'):
-	  <span clsas="item-list__item-added-at">{{item['added_at']}}</span>
+	  <span class="item-list__item-added-at">{{item['added_at'].strftime('%F, %T')}}</span>
 	  %end
 	  <span class="item-list__item-location">Location: {{item['location']}}</span>
 	</div>
